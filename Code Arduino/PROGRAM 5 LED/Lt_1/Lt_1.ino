@@ -1,7 +1,6 @@
 int led1Pin = 8;
 int led2Pin = 9;
 int ledState = LOW;
-
 void setup() {
   // put your setup code here, to run once:
   pinMode(led1Pin, OUTPUT);
