@@ -1,6 +1,6 @@
-const int switch1Pin = 0; // Switch 1 Located
-const int switch2Pin = 1; // Switch 2 Located
-const int ledPin = 2;     // LED located
+const int switch1Pin = 1; // Switch 1 Located
+const int switch2Pin = 2; // Switch 2 Located
+const int ledPin = 3;     // LED located
 int delayTimer = 500;     // Default Timer 500ms
 
 void setup() {

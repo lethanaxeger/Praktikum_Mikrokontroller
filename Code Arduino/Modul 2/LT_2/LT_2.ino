@@ -5,7 +5,7 @@ bool switchState = false;
 int brightness;
 
 void setup() {
-  pinMode(switchPin, INPUT);
+  pinMode(switchPin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
 }
 
@@ -15,15 +15,13 @@ void loop() {
   if (switchState == LOW){
     for (brightness = 0; brightness <= 255; brightness += 5) {
     analogWrite(ledPin, brightness);
-    delay(20);
+    delay(100);
     }
     for (brightness = 255; brightness >= 0; brightness -= 5){
     analogWrite(ledPin, brightness);
-    delay(20);
+    delay(100);
    }
-  } 
-  else 
-  {
+  }else{
   analogWrite(ledPin, 0);
   }
 }

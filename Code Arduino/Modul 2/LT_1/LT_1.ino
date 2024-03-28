@@ -7,8 +7,8 @@ int buttonState2 = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(switch1Pin, INPUT);
-  pinMode(switch2Pin, INPUT);
+  pinMode(switch1Pin, INPUT_PULLUP);
+  pinMode(switch2Pin, INPUT_PULLUP);
   pinMode(ledPin, OUTPUT);
   // set ledPinState = LOW;
 }
@@ -18,12 +18,12 @@ void loop() {
   buttonState1 = digitalRead(switch1Pin);
   buttonState2 = digitalRead(switch2Pin);
 
-  if(buttonState1 == HIGH)
+  if(buttonState2 == HIGH)
   {
-    digitalWrite(ledPin, HIGH);
-  }
-  else if(buttonState2 == HIGH) {
     digitalWrite(ledPin, LOW);
   }
-  digitalWrite(ledPin, HIGH);
+  else if(buttonState1 == HIGH) {
+    digitalWrite(ledPin, HIGH);
+  }
+ 
 }

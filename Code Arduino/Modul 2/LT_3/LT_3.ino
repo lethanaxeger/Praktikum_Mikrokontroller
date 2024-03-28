@@ -17,16 +17,18 @@ void loop() {
   int switchState2 = digitalRead(switchPin2);
 
   // Jika saklar 1 ditekan, LED berpindah dari LED-1 ke LED-4
-  if (switchState1 == LOW) {
+  if (switchState2 == LOW) {
     for (int i = 0; i < 4; i++) {
-      digitalWrite(ledPins[i], HIGH); // Nyalakan semua LED 
+      for (int i = 0; i < 4; i++) {
+      digitalWrite(ledPins[i], LOW); // Matikan semua LED 
       delay(200);
+      }
     }
   } 
   // Jika saklar 2 ditekan, matikan semua LED
-  if (switchState2 == LOW) {
+  else if (switchState1 == LOW) {
     for (int i = 0; i < 4; i++) {
-      digitalWrite(ledPins[i], LOW); // Matikan semua LED 
+      digitalWrite(ledPins[i], HIGH); // Nyalakan semua LED 
       delay(200);
     }
   }
